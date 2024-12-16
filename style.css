@@ -268,7 +268,7 @@ section {
     font-size: 2rem; /* Velikost písma pro ikony */
     color: rgb(255, 168, 7); /* Oranžová barva písma */
     margin: 10px 5px; /* Okraje mezi ikonami */
-    padding-left: -2rem; /* Záporné odsazení zleva */
+    padding-left:1rem; /* Záporné odsazení zleva */
     padding-top: 0.4rem; /* Odsazení shora */
 }
 
