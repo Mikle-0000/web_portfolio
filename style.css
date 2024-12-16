@@ -1,0 +1,706 @@
+
+/* Globální reset stylů */
+* {
+    box-sizing: border-box; /* Nastavení modelu boxu na border-box pro všechny prvky */
+    margin: 0; /* Zrušení výchozích okrajů */
+    padding: 0; /* Zrušení výchozích výplní */
+    text-decoration: none; /* Zrušení podtržení textu u odkazů */
+    border: none; /* Zrušení výchozích rámečků */
+    outline: none; /* Skrytí obrysu při zaostření (focus) */
+    scroll-behavior: smooth; /* Hladké posouvání stránky při skoku na kotvy */
+}
+
+/* Styl těla stránky */
+body {
+    font-family: "Poppins", sans-serif; /* Nastavení fontu pro celý web */
+    background-color: #1a1a1a; /* Nastavení tmavého pozadí */
+    color: #ffffff; /* Barva textu - bílá */
+    overflow: hidden; /* Skrytí vertikálního i horizontálního posouvání */
+}
+
+/* Styl HTML dokumentu */
+html {
+    font-size: 62.5%; /* Nastavení základní velikosti písma na 62.5% pro jednodušší výpočty (1rem = 10px) */
+    overflow-x: hidden; /* Skrytí horizontálního posouvání */
+}
+
+/* Styl sekcí */
+section {
+    margin: 4rem; /* Vnější okraj sekcí */
+    padding: 2rem; /* Vnitřní okraj sekcí */
+}
+
+/* Styl odstavců s třídou "paragraph" */
+.paragraph {
+    font-size: 1.6rem; /* Nastavení velikosti písma na 16px */
+}
+
+/* Styl textů s třídou "fronted-dev" */
+.fronted-dev {
+    color: rgb(255, 168, 7); /* Barva textu - oranžová */
+    font-weight: 900; /* Maximální tučnost písma */
+}
+
+
+
+/*                                                      <NAV BAR>                                                                      */
+
+    
+
+
+/* Styl pro navigační lištu */
+.nav-bar {
+    list-style: none; /* Zrušení výchozího seznamu (žádné odrážky) */
+    top: 0; /* Umístění lišty na vrchol stránky */
+    left: 0; /* Umístění na levý okraj stránky */
+    height: 60px; /* Výška navigace */
+    width: 100%; /* Šířka lišty na celé šířce stránky */
+    display: flex; /* Flexbox pro uspořádání prvků uvnitř lišty */
+    justify-content: space-between; /* Vytvoření prostoru mezi jednotlivými prvky */
+    align-items: center; /* Vertikální zarovnání prvků do středu */
+    padding: 20px 20px; /* Vnitřní okraje navigační lišty */
+    overflow: hidden; /* Skrytí obsahu přesahujícího hranice navigační lišty */
+    background: #000; /* Černé pozadí pro navigační lištu */
+    border-bottom: 2px solid white; /* Bílý spodní okraj lišty */
+    position: fixed; /* Fixní pozice na stránce (zůstane na místě při scrollování) */
+    animation: colorChange 3s infinite alternate; /* Aplikace animace změny barvy */
+}
+
+/* Definice animace pro změnu barvy spodního okraje navigační lišty */
+@keyframes colorChange {
+    0% { border-bottom-color: red; } /* Na začátku je barva červená */
+    20% { border-bottom-color: green; } /* Po 20% animace barva zelená */
+    40% { border-bottom-color: blue; } /* Po 40% animace barva modrá */
+    60% { border-bottom-color: yellow; } /* Po 60% animace barva žlutá */
+    80% { border-bottom-color: purple; } /* Po 80% animace barva fialová */
+    100% { border-bottom-color: orange; } /* Na konci animace barva oranžová */
+}
+
+
+
+
+
+
+
+
+
+/* Styl pro logo */
+.logo {
+    font-size: 15px; /* Nastavení velikosti písma pro logo */
+}
+
+/* Styl pro třídu white */
+.white {
+    color: #ffffff; /* Barva textu je bílá */
+    font-weight: 900; /* Tučné písmo */
+}
+
+/* Styl pro globální nadpis (global-head) */
+.global-head {
+    font-weight: bold; /* Tučné písmo */
+    color: #000000; /* Barva textu je černá */
+    border: 2px solid rgb(255, 168, 7); /* Oranžový rámeček kolem textu */
+    border-radius: 3.5px; /* Zaoblení rohů rámečku */
+    background-color: rgb(255, 168, 7); /* Oranžové pozadí za textem */
+    padding: 2px; /* Vnitřní okraje pro text, aby nebyl přímo na okraji rámečku */
+    font-weight: 900; /* Tučné písmo */
+}
+
+/* Styl pro komunitní text (community) */
+.community {
+    color: white; /* Barva textu je bílá */
+    font-size: 10px; /* Velikost písma je 10px */
+    text-align: center; /* Zarovnání textu na střed */
+    padding-top: 9px; /* Vnitřní okraj nahoře (pro odsazení od horního okraje) */
+    letter-spacing: 7px; /* Zvýšení mezery mezi písmeny */
+}
+
+
+
+/*                                                      </NAV BAR>                                                                      */
+
+
+
+
+
+
+/*                                                       <BURGER MENU>                                                                  */
+
+/* Styl pro menu (seznam položek) */
+.menu {
+    display: flex; /* Použití flexboxu pro uspořádání položek v řádku */
+}
+
+/* Styl pro položky v menu (li) */
+.menu li {
+    padding-left: 30px; /* Odsazení položek od levého okraje */
+}
+
+/* Styl pro odkazy v menu */
+.menu li a {
+    display: inline-block; /* Odkazy jsou zobrazeny jako bloky na řádku */
+    text-decoration: none; /* Zrušení podtržení odkazu */
+    color: rgb(255, 168, 7); /* Barva textu odkazu je oranžová */
+    text-align: center; /* Zarovnání textu na střed */
+    transition: 0.15s ease-in-out; /* Přechodová animace pro změny stylů */
+    position: relative; /* Nastavení pozice pro pseudo-elementy */
+    text-transform: uppercase; /* Velká písmena pro text odkazu */
+}
+
+/* Pseudo-element ::after pro efekt podtržení odkazu */
+.menu li a::after {
+    content: ""; /* Vytvoření prázdného obsahu (používá se pro vytvoření efektu) */
+    position: absolute; /* Absolutní pozicování uvnitř odkazu */
+    bottom: 0; /* Umístění na spodní okraj odkazu */
+    left: 0; /* Umístění na levý okraj odkazu */
+    width: 0; /* Počáteční šířka efektu je 0 */
+    height: 1px; /* Výška efektu je 1px */
+    background-color: rgb(255, 168, 7); /* Oranžová barva podtržení */
+    transition: 0.15s ease-in-out; /* Přechod pro změnu šířky podtržení */
+}
+
+/* Efekt pro rozšíření podtržení odkazu při najetí myší */
+.menu li a:hover:after {
+    width: 100%; /* Při najetí myší se šířka podtržení roztáhne na 100% */
+}
+
+/* Styl pro tlačítka pro otevření a zavření menu */
+.open-menu, .close-menu {
+    position: absolute; /* Absolutní pozicování */
+    color: rgb(255, 168, 7); /* Oranžová barva pro ikony */
+    cursor: pointer; /* Změna kurzoru na ukazatel pro kliknutí */
+    font-size: 1.5rem; /* Velikost písma pro ikony */
+    display: none; /* Skrytí ikon ve výchozím stavu */
+}
+
+/* Styl pro ikonu otevření menu */
+.open-menu {
+    top: 50%; /* Umístění ikony na střed vertikálně */
+    right: 20px; /* Umístění 20px od pravého okraje */
+    transform: translateY(-50%); /* Vertikální centrování ikony */
+}
+
+/* Styl pro ikonu zavření menu */
+.close-menu {
+    top: 17px; /* Umístění ikony 17px od horního okraje */
+    right: 20px; /* Umístění 20px od pravého okraje */
+}
+
+/* Skrytí zaškrtávacího políčka */
+#check {
+    display: none; /* Skrytí zaškrtávacího políčka */
+}
+
+
+/*                                                       </BURGER MENU>                                                                 */
+
+
+
+
+
+/*                                                       <SECTIONS HOME>                                                              */
+
+
+/* Styl pro sekci "home" */
+.home {
+    margin-bottom: 1rem; /* Okraj dole */
+    font-size: 1rem; /* Velikost písma */
+    font-weight: 900; /* Tučné písmo */
+    text-align: center; /* Zarovnání textu na střed */
+}
+
+/* Kontejner pro obsah a obrázky v sekci "home" */
+.home-container {
+    display: flex; /* Flexbox pro uspořádání položek */
+    justify-content: center; /* Vycentrování položek horizontálně */
+    align-items: center; /* Vycentrování položek vertikálně */
+    flex-wrap: wrap; /* Umožnění zalomení položek na novou řadu */
+    gap: 2rem; /* Mezera mezi položkami */
+}
+
+/* Styl pro jednotlivé bloky v "home" sekci (obsah a obrázky) */
+.home-content, .home-img {
+    flex: 1 1 30rem; /* Flexbox nastavení: položky se mohou zvětšovat, zůstávají minimálně 30rem široké */
+    padding: 3rem 2rem 4rem; /* Vnitřní okraje: nahoře, vlevo a vpravo, dole */
+    text-align: center; /* Zarovnání textu na střed */
+    padding-bottom: 2rem; /* Dno paddingu */
+}
+
+/* Styl pro nadpisy h3 v "home-content" */
+.home-content h3 {
+    font-size: 2.2rem; /* Velikost písma */
+    font-weight: 700; /* Tučné písmo */
+    line-height: 1.4; /* Výška řádku */
+    text-align: left; /* Zarovnání textu vlevo */
+}
+
+/* Styl pro odstavce v "home-content" */
+.home-content p {
+    text-align: left; /* Zarovnání textu vlevo */
+}
+
+/* Styl pro nadpisy h1 v "home-content" */
+.home-content h1 {
+    font-size: 4rem; /* Velikost písma */
+    font-weight: 700; /* Tučné písmo */
+}
+
+/* Styl pro obrázky v "home-img" */
+.home-img img {
+    width: 300px; /* Šířka obrázku */
+    height: auto; /* Automatická výška pro zachování poměru */
+    border-radius: 100%; /* Zaoblení obrázku na kruh */
+    margin-top: -0px; /* Žádné odsazení nahoře */
+    box-shadow: 0 0 10px rgb(255, 168, 7), 0 0 20px rgb(255, 168, 7); /* Stín kolem obrázku (oranžový) */
+    transition: box-shadow 0.3s ease; /* Plynulý přechod pro změnu stínu */
+}
+
+/* Styl pro ikony sociálních médií */
+.social-media a {
+    display: inline-block; /* Zobrazení jako blok */
+    justify-content: center; /* Vycentrování obsahu horizontálně */
+    align-items: center; /* Vycentrování obsahu vertikálně */
+    width: 4rem; /* Šířka ikony */
+    height: 4rem; /* Výška ikony */
+    background: transparent; /* Průhledné pozadí */
+    border: .2rem solid rgb(255, 168, 7); /* Oranžový okraj kolem ikony */
+    border-radius: 50%; /* Zaoblení ikony na kruh */
+    font-size: 2rem; /* Velikost písma pro ikony */
+    color: rgb(255, 168, 7); /* Oranžová barva písma */
+    margin: 10px 5px; /* Okraje mezi ikonami */
+    padding-left: -2rem; /* Záporné odsazení zleva */
+    padding-top: 0.4rem; /* Odsazení shora */
+}
+
+/* Efekt při najetí myší na ikony sociálních médií */
+.social-media a:hover {
+    background-color: rgb(255, 168, 7); /* Pozadí ikony se změní na oranžové */
+    color: black; /* Barva písma se změní na černou */
+    box-shadow: 0 0 1rem rgb(255, 168, 7); /* Změna stínu při najetí na oranžový */
+}
+
+/* Styl pro tlačítko "informovat" */
+.informovat {
+    display: inline-block; /* Zobrazení jako blok */
+    font-size: 1.5rem; /* Velikost písma */
+    border: 2px solid rgb(255, 168, 7); /* Oranžový okraj */
+    background-color: rgb(255, 168, 7); /* Oranžové pozadí */
+    border-radius: 5px; /* Zaoblení rohu */
+    color: black; /* Barva písma je černá */
+    font-weight: 900; /* Tučné písmo */
+    padding: 0.6rem; /* Vnitřní okraje */
+    margin-top: 1rem; /* Okraj nahoř*/
+    font-weight: 900;
+    text-align: center;
+    
+}
+.about h2 {
+    margin-bottom: 5rem; /* Nastavuje spodní okraj na 5rem, aby vytvořil dostatek prostoru pod titulkem */
+    font-size: 4rem; /* Nastavuje velikost písma na 4rem, což je relativní jednotka na základě velikosti písma v html */
+    font-weight: 900; /* Nastavuje velmi silnou tučnost písma (900 znamená maximální tučnost) */
+    text-align: center; /* Zarovnává text na střed */
+}
+
+.about h3 {
+    font-size: 2rem; /* Nastavuje velikost písma na 2rem */
+    line-height: 2; /* Nastavuje výšku řádku na 2, což znamená větší mezery mezi řádky textu pro lepší čitelnost */
+}
+
+.about-container {
+    display: flex; /* Aktivuje Flexbox, který usnadňuje rozložení prvků */
+    justify-content: center; /* Zarovnává všechny položky ve Flexboxu horizontálně na střed */
+    align-items: center; /* Zarovnává položky vertikálně na střed */
+    flex-wrap: wrap; /* Povolení zalamování prvků, pokud se nevejdou na jednu řadu */
+    gap: 2rem; /* Vytváří mezeru 2rem mezi jednotlivými položkami ve Flexboxu */
+}
+
+.about-container p {
+    font-size: 1.5rem; /* Nastavuje velikost písma na 1.5rem pro text v této sekci */
+    text-align: left; /* Zarovnává text na levou stranu */
+}
+
+.about-img, .about-content {
+    flex: 1 1 30rem; /* Každý prvek (obrázek a obsah) zabírá minimálně 30rem a může růst v závislosti na dostupném prostoru */
+    text-align: center; /* Text v těchto prvcích je zarovnán na střed */
+}
+
+.about img {
+    width: 100%; /* Nastavuje šířku obrázku na 100% dostupného prostoru v jeho kontejneru */
+    border: 2px solid rgb(255, 168, 7); /* Přidává oranžovou (rgb(255, 168, 7)) rámeček kolem obrázku o tloušťce 2px */
+    box-shadow: 0 0 10px rgb(255, 168, 7), 0 0 20px rgb(255, 168, 7); /* Přidává oranžový stín kolem obrázku pro zvýraznění */
+    transition: box-shadow 0.3s ease; /* Přidává plynulý přechod pro změnu stínu s trváním 0.3 sekundy */
+}
+
+
+/*                                                       </SECTIONS ABOUT>                                                              */
+
+
+
+
+
+
+
+
+/*                                                       <SECTIONS PRAXE>                                                              */
+
+
+/* Hlavní nadpis sekce praxe */
+.head-praxe {
+    margin-bottom: 4rem; /* Spodní okraj pro oddělení od následujícího obsahu */
+    font-size: 4rem; /* Velikost písma pro nadpis */
+    font-weight: 900; /* Tloušťka písma (tučné) */
+    text-align: center; /* Zarovnání textu na střed */
+}
+
+/* Kontejner pro praxe, který používá flexbox pro uspořádání */
+.praxe-container {
+    display: flex; /* Aktivace flexboxu */
+    justify-content: center; /* Horizontální zarovnání na střed */
+    align-items: center; /* Vertikální zarovnání na střed */
+    flex-wrap: wrap; /* Umožňuje zalamování prvků na další řádek */
+    gap: 2rem; /* Mezera mezi jednotlivými prvky */
+}
+
+/* Styl pro jednotlivé karty praxe (Linux, HTML/CSS, JavaScript) */
+.praxe-linux, .praxe-html-css, .praxe-js {
+    flex: 1 1 30rem; /* Flexibilní šířka s minimální šířkou 30rem */
+    background-color: rgb(255, 168, 7); /* Pozadí karty */
+    padding: 3rem 2rem 4rem; /* Vnitřní okraje (padding) */
+    border-radius: 4rem; /* Zaoblení rohů karty */
+    text-align: center; /* Zarovnání textu na střed */
+    border: .2rem solid rgb(255, 168, 7); /* Rám karty, který odpovídá pozadí */
+    padding-bottom: 2rem; /* Spodní padding (přepsáno z předchozího) */
+}
+
+/* Styl pro nadpisy v kartách praxe */
+.praxe-linux h3, .praxe-html-css h3, .praxe-js h3 {
+    font-size: 2rem; /* Velikost písma pro nadpisy */
+    color: #000; /* Barva textu (černá) */
+    font-weight: 900; /* Tloušťka písma (tučné) */
+    margin-bottom: 20px; /* Spodní okraj pro oddělení od následujícího obsahu */
+}
+
+/* Styl pro odstavce v kartách praxe */
+.praxe-linux p, .praxe-html-css p, .praxe-js p {
+    font-size: 1.5rem; /* Velikost písma pro odstavce */
+    color: black; /* Barva textu (černá) */
+    text-align: left; /* Zarovnání textu vlevo */
+    font-weight: 700; /* Tloušťka písma (polotučné) */
+    line-height: 1.3; /* Výška řádku pro lepší čitelnost */
+}
+
+/* Styl pro tlačítka v kartách praxe */
+.praxe-linux .btn, .praxe-html-css .btn, .praxe-js .btn {
+    text-decoration: none; /* Zrušení podtržení textu */
+    color: rgb(255, 168, 7); /* Barva textu tlačítka */
+    font-size: 20px; /* Velikost písma pro tlačítka */
+    font-weight: 800; /* Tloušťka písma (tučné) */
+    background-color: #000; /* Pozadí tlačítka (černé) */
+    border: 2px solid rgb(255, 168, 7); /* Rám tlačítka, který odpovídá barvě textu */
+    border-radius: 14px; /* Zaoblení rohů tlačítka */
+    padding: 15px; /* Vnitřní okraj tlačítka */
+    margin-top: 20px; /* Spodní okraj pro oddělení od následujícího obsahu */
+    display: inline-block; /* Zobrazení jako blok pro inline prvky */
+}
+
+/* Efekt při najetí myší na tlačítka */
+.praxe-linux .btn:hover, .praxe-html-css .btn:hover, .praxe-js .btn:hover {
+    font-size: 25px; /* Zvětšení velikosti písma při najetí myší */
+    color: white;  }
+
+/*                                                       </SECTIONS PRAXE>                                                            */
+
+
+
+
+
+
+/*                                                       <SECTIONS KONTAKT>                                                            */
+
+
+
+.kontakt {
+    background-color:rgb(255, 168, 7) ; /* Světle šedé pozadí */
+    padding: 20px;
+    border-radius: 8px; /* Zaoblené rohy */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Jemný stín */
+}
+
+.kontakt h2 {
+    color: #000; /* Tmavě šedý text */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.kontakt-container {
+    max-width: 600px; /* Maximální šířka formuláře */
+    margin: 0 auto; /* Vycentrování formuláře */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Mezera mezi jednotlivými skupinami */
+}
+
+label {
+    display: block; /* Zobrazit label jako blok */
+    margin-bottom: 5px; /* Mezera pod label */
+    font-weight: bold; /* Tučný text */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Šířka 100% */
+    padding: 10px; /* Vnitřní okraje */
+    border: 1px solid #ccc; /* Světle šedý okraj */
+    border-radius: 4px; /* Zaoblené rohy */
+    font-size: 16px; /* Velikost písma */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #000; /* Modrý okraj při zaostření */
+    outline: none; /* Odstranit standardní rámeček */
+}
+
+textarea {
+    resize: vertical; /* Umožnit vertikální změnu velikosti */
+}
+
+.btn {
+    background-color: #000; /* Modré pozadí tlačítka */
+    color: white; /* Bílý text */
+    border: none; /* Bez okraje */
+    padding: 10px 20px; /* Vnitřní okraje */
+    border-radius: 4px; /* Zaoblené rohy */
+    cursor: pointer; /* Ukazatel myši jako ruka */
+    font-size: 16px; /* Velikost písma */
+    transition: background-color 0.3s; /* Plynulý přechod */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Tmavší modrá při najetí myší */
+}
+
+
+
+
+
+
+
+
+
+/*                                                       </SECTIONS KONTAKT>                                                            */
+
+
+
+
+.footer {
+    background-color: #000; /* Černé pozadí */
+    color: #ffffff; /* Bílý text */
+    padding: 20px 0; /* Vnitřní okraje */
+    text-align: center; /* Vycentrování textu */
+}
+
+.footer-container {
+    max-width: 1200px; /* Maximální šířka */
+    margin: 0 auto; /* Vycentrování */
+    padding: 0 20px; /* Vnitřní okraje */
+}
+
+.footer-links {
+    margin-bottom: 10px; /* Mezera pod odkazy */
+}
+
+.footer-links a {
+    color: #ff0000; /* Červená barva pro odkazy */
+    text-decoration: none; /* Bez podtržení */
+    margin: 0 15px; /* Mezera mezi odkazy */
+    font-weight: bold; /* Tučný text */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Podtržení při najetí myší */
+}
+
+.footer-social {
+    margin-bottom: 10px; /* Mezera pod sociálními ikonami */
+}
+
+.social-icon {
+    color: #ff0000; /* Červená barva pro sociální ikony */
+    text-decoration: none; /* Bez podtržení */
+    margin: 0 10px; /* Mezera mezi ikonami */
+}
+
+.footer-text {
+    font-size: 14px; /* Velikost písma pro copyright */
+}
+
+
+/* Media query pro zařízení s maximální šířkou 610px */
+@media(max-width:610px) {
+    /* Styl pro menu, které se zobrazuje na menších obrazovkách */
+    .menu {
+        flex-direction: column; /* Uložení položek menu do sloupce */
+        align-items: center; /* Zarovnání položek na střed horizontálně */
+        justify-content: center; /* Zarovnání položek na střed vertikálně */
+        width: 80%; /* Šířka menu na 80% obrazovky */
+        height: 100vh; /* Výška menu na 100% výšky obrazovky */
+        position: fixed; /* Fixní pozice, aby menu zůstalo na místě při scrollování */
+        top: 0; /* Umístění menu na vrchol obrazovky */
+        right: -100%; /* Skrytí menu mimo obrazovku (vpravo) */
+        z-index: 100; /* Z-index pro zajištění, že menu bude nad ostatními prvky */
+        background-color: black; /* Pozadí menu černé */
+        transition: all 0.2s ease-in-out; /* Plynulý přechod pro animaci */
+    }
+
+    /* Styl pro položky menu */
+    .menu li {
+        margin-top: 40px; /* Spodní okraj pro oddělení položek menu */
+    }
+
+    /* Styl pro odkazy v položkách menu */
+    .menu li a {
+        padding: 10px; /* Vnitřní okraj pro odkazy */
+    }
+
+    /* Zobrazení ikon pro otevření a zavření menu */
+    .open-menu, .close-menu {
+        display: block; /* Zobrazení ikon */
+    }
+
+    /* Při zaškrtnutí checkboxu (např. pro otevření menu) */
+    #check:checked ~ .menu {
+        right: 0; /* Posunutí menu do viditelné oblasti obrazovky */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                                                         <SNOW-ANIMATIONS>                                                           */
+
+/* Styl pro sněhové vločky */
+.snowflake {
+    position: absolute; /* Absolutní pozice pro umístění sněhových vloček */
+    top: -10%; /* Umístění sněhové vločky nad viditelnou oblastí */
+    color: #288cd3; /* Barva sněhové vločky */
+    font-size: 2rem; /* Velikost písma pro sněhovou vločku */
+    animation: fall linear infinite; /* Aplikace animace 'fall' s plynulým pohybem a nekonečným opakováním */
+}
+
+/* Definice animace 'fall' */
+@keyframes fall {
+    0% {
+        transform: translateY(0); /* Na začátku animace je sněhová vločka na své výchozí pozici */
+    }
+    100% {
+        transform: translateY(100vh); /* Na konci animace se sněhová vločka posune dolů o 100% výšky viewportu */
+    }
+}
+
+/* Styl pro jednotlivé sněhové vločky s různými pozicemi a animacemi */
+.snowflake:nth-child(1) {
+    left: 10%; /* Umístění první sněhové vločky na 10% šířky obrazovky */
+    animation-duration: 3s; /* Doba trvání animace pro tuto sněhovou vločku */
+    animation-delay: 0s; /* Žádné zpoždění před začátkem animace */
+}
+
+.snowflake:nth-child(2) {
+    left: 20%; /* Umístění druhé sněhové vločky na 20% šířky obrazovky */
+    animation-duration: 4s; /* Doba trvání animace pro tuto sněhovou vločku */
+    animation-delay: 1s; /* Zpoždění 1 sekundy před začátkem animace */
+}
+
+.snowflake:nth-child(3) {
+    left: 30%; /* Umístění třetí sněhové vločky na 30% šířky obrazovky */
+    animation-duration: 5s; /* Doba trvání animace pro tuto sněhovou vločku */
+    animation-delay: 2s; /* Zpoždění 2 sekundy před začátkem animace */
+}
+
+.snowflake:nth-child(4) {
+    left: 40%; /* Umístění čtvrté sněhové vločky na 40% šířky obrazovky */
+    animation-duration: 3.5s; /* Doba trvání animace pro tuto sněhovou vločku */
+    animation-delay: 0.5s; /* Zpoždění 0.5 sekundy před začátkem animace */
+}
+
+.snowflake:nth-child(5) {
+    left: 50%; /* Umístění páté sněhové vločky na 50% šířky obrazovky */
+    animation-duration: 4.5s; /* Doba trvání animace pro tuto sněhovou vločku */
+    animation-delay: 1.5s; /* Zpoždění 1.5 sekundy před začátkem animace */
+}
+
+.snowflake:nth-child(6) {
+    left: 60%; /* Umístění šesté sněhové vločky na 60% šířky obrazovky */
+    animation-duration: 5s; /* Doba trvání animace pro tuto sněhovou vločku */
+    animation-delay: 2.5s; /* Zpoždění 2.5 sekundy před začátkem animace */
+}
+
+.snowflake:nth-child(7) {
+    left: 70%; /* Umístění sedmé sněhové vločky na 70% šířky obrazovky */
+    animation-duration: 3s; /* Doba trvání animace pro tuto sněhovou vločku */
+    animation-delay: 0.2s; /* Zpoždění 0.2 sekundy před začátkem animace */
+}
+
+.snowflake:nth-child(8) {
+    left: 80%; /* Umístění osmé sněhové vločky na 80% šířky obrazovky */
+    animation-duration: 4s; /* Doba trvání animace pro tuto sněhovou vločku */
+    animation-delay: 1.2s; /* Zpoždění 1.2 sekundy před zač*/
+      }
+
+/*                                                         </SNOW-ANIMATIONS>                                                           */
+
+
+
+/* Adaptivní styly */
+
+/* Mediální dotazy pro přizpůsobení */
+@media (min-width: 768px) {
+    /* Styly pro obrazovky širší než 768px */
+    .home-container {
+        flex-direction: row; /* Horizontální zarovnání na velkých obrazovkách */
+        justify-content: space-between; /* Rozložení prostoru mezi prvky */
+        align-items: center; /* Vertikální zarovnání prvků na střed */
+    }
+
+    .home-img {
+        margin-right: 20px; /* Vzdálenost mezi obrázkem a obsahem */
+    }
+
+    .home-content {
+        text-align: left; /* Zarovnání textu vlevo na velkých obrazovkách */
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Styly pro obrazovky širší než 1024px */
+    .home-container {
+        max-width: 1200px; /* Maximální šířka kontejneru */
+        margin: 0 auto; /* Centrovaní kontejneru horizontálně */
+    }
+}
+
+
+
+
